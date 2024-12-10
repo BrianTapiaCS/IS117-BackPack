@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backpack Store</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Navbar Styling */
+        nav {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Hero Section Styling */
+        .hero {
+            background: url('https://via.placeholder.com/1920x1080?text=Explore+Adventure+Backpacks') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .hero .btn {
+            background-color: #ffc107;
+            color: #333;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+        }
+
+        /* Cards Section */
+        .card-title {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .card {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Subscription Section */
+        .subscription-section {
+            background: #f8f9fa;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .subscription-section h2 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 20px;
+        }
+
+        .subscription-section .btn {
+            background-color: #333;
+            color: white;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #111;
+            color: #bbb;
+            padding: 50px 20px;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        footer h5 {
+            color: white;
+        }
+
+        footer a {
+            color: #ffc107;
+        }
+
+        footer .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+
+        footer .flags img {
+            width: 30px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Backpack Store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Adventure Backpacks</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Laptop Backpacks</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Travel Backpacks</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Accessories</a></li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-search"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-user"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-question-circle"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Discount Banner -->
+<div class="discount-banner text-white text-center py-2" style="background-color: #a05d35; font-family: 'Quicksand', sans-serif; position: relative; overflow: hidden;">
+    <p class="m-0" style="font-size: 1.2rem; font-weight: bold; animation: flash 1.5s infinite;">
+        🎉 Gift Confidently: Enjoy <span style="text-decoration: underline;">Free Shipping</span> on Orders Over $75 & Free Returns After The Holidays! 🎁
+    </p>
+</div>
+
+<!-- CSS Animation -->
+<style>
+    @keyframes flash {
+        0% { opacity: 1; }
+        50% { opacity: 0.6; }
+        100% { opacity: 1; }
+    }
+</style>
+
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backpack Store</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+        }
+        .hero-carousel {
+            position: relative;
+            overflow: hidden;
+            height: 500px;
+        }
+        .hero-carousel .carousel-inner {
+            height: 100%;
+        }
+        .hero-carousel .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .hero-carousel .carousel-caption {
+            position: absolute;
+            bottom: 20%;
+            left: 10%;
+            color: white;
+            text-align: left;
+            z-index: 10;
+        }
+        .hero-carousel .btn {
+            position: absolute;
+            bottom: 10%;
+            left: 10%;
+            background-color: #FFC107;
+            border: none;
+            color: black;
+            font-weight: bold;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel" data-bs-interval="2500">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/backpackbanner1.jpg?text=Backpack+1" alt="First Slide">
+                <div class="carousel-caption">
+                    <h1 class="display-4 fw-bold" style="font-family: 'Playfair Display', serif;">Explore Adventure</h1>
+                    <p class="lead" style="font-family: 'Quicksand', sans-serif;">Discover premium backpacks crafted for your journey.</p>
+                </div>
+                <a href="#collection" class="btn">Shop Now</a>
+            </div>
+            <div class="carousel-item">
+                <img src="images/backpackbanner2.jpg" alt="Second Slide">
+                <div class="carousel-caption">
+                    <h1 class="display-4 fw-bold" style="font-family: 'Playfair Display', serif;">Style Meets Function</h1>
+                    <p class="lead" style="font-family: 'Quicksand', sans-serif;">Find the perfect backpack for every occasion.</p>
+                </div>
+                <a href="#collection" class="btn">Shop Now</a>
+            </div>
+            <div class="carousel-item">
+                <img src="images/backpackbanner3.jpg" alt="Third Slide">
+                <div class="carousel-caption">
+                    <h1 class="display-4 fw-bold" style="font-family: 'Playfair Display', serif;">Travel Ready</h1>
+                    <p class="lead" style="font-family: 'Quicksand', sans-serif;">Durable backpacks built for the road ahead.</p>
+                </div>
+                <a href="#collection" class="btn">Shop Now</a>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+s
+  <!-- New Section for Features -->
+<section class="features-section py-5" style="background-color: #f9f9f9;">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-4" style="font-family: 'Playfair Display', serif; font-size: 2.5rem;">
+            We Make Better Things in a Better Way
+        </h2>
+        <p class="mb-5" style="font-family: 'Quicksand', sans-serif; font-size: 1.1rem;">
+            By looking to the world's greatest innovator—Nature—we create backpacks that deliver unrivaled comfort that you feel good in and feel good about.
+        </p>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="feature-card">
+                    <img src="/images/backpack365.jpg" alt="Everyday Wear" class="img-fluid rounded feature-img">
+                    <h4 class="mt-3" style="font-family: 'Playfair Display', serif;">Everyday Wear</h4>
+                    <p style="font-family: 'Quicksand', sans-serif;">Durable, stylish, and functional backpacks for your daily commute.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="feature-card">
+                    <img src="/images/backpack2-removebg-preview.png" alt="Weather Ready" class="img-fluid rounded feature-img">
+                    <h4 class="mt-3" style="font-family: 'Playfair Display', serif;">Weather Ready</h4>
+                    <p style="font-family: 'Quicksand', sans-serif;">Waterproof and resilient, built to endure any weather conditions.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="feature-card">
+                    <img src="/images/backpack3365.jpg" alt="On the Move" class="img-fluid rounded feature-img">
+                    <h4 class="mt-3" style="font-family: 'Playfair Display', serif;">On the Move</h4>
+                    <p style="font-family: 'Quicksand', sans-serif;">Compact and versatile for every adventure, big or small.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials-section py-5" style="background-color: #fff;">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-4" style="font-family: 'Playfair Display', serif; font-size: 2.5rem;">What Our Customers Say</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="testimonial-card p-4 shadow-sm rounded text-center" style="background-color: #f9f9f9;">
+                    <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?crop=faces&fit=crop&w=100&h=100&q=80" 
+                         alt="Sarah J." 
+                         class="rounded-circle mb-3" 
+                         style="width: 100px; height: 100px; object-fit: cover;">
+                    <p style="font-family: 'Quicksand', sans-serif; font-size: 1rem; color: #555;">
+                        "The backpack is perfect for my busy work schedule! I love how durable it is, and the sleek design gets me compliments everywhere I go."
+                    </p>
+                    <h5 class="mt-3" style="font-family: 'Playfair Display', serif; color: #333;">— Sarah J.</h5>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="testimonial-card p-4 shadow-sm rounded text-center" style="background-color: #f9f9f9;">
+                    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?crop=faces&fit=crop&w=100&h=100&q=80" 
+                         alt="Michael R." 
+                         class="rounded-circle mb-3" 
+                         style="width: 100px; height: 100px; object-fit: cover;">
+                    <p style="font-family: 'Quicksand', sans-serif; font-size: 1rem; color: #555;">
+                        "This is hands down the best purchase I've made this year. It's spacious, lightweight, and the quality is unmatched!"
+                    </p>
+                    <h5 class="mt-3" style="font-family: 'Playfair Display', serif; color: #333;">— Michael R.</h5>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="testimonial-card p-4 shadow-sm rounded text-center" style="background-color: #f9f9f9;">
+                    <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?crop=faces&fit=crop&w=100&h=100&q=80" 
+                         alt="Alex T." 
+                         class="rounded-circle mb-3" 
+                         style="width: 100px; height: 100px; object-fit: cover;">
+                    <p style="font-family: 'Quicksand', sans-serif; font-size: 1rem; color: #555;">
+                        "I took this backpack hiking in the mountains, and it exceeded all expectations. The waterproof feature is a lifesaver!"
+                    </p>
+                    <h5 class="mt-3" style="font-family: 'Playfair Display', serif; color: #333;">— Alex T.</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+          <!-- Subscription Section -->
+    <section class="subscription-section py-5" style="background-color: #f9f9f9;">
+        <div class="container text-center">
+            <h2 class="fw-bold" style="font-family: 'Playfair Display', serif; font-size: 2.5rem;">Want First Dibs?</h2>
+            <p class="mt-3" style="font-family: 'Quicksand', sans-serif; font-size: 1.1rem;">
+                Join our email list and be the first to know about new limited edition products, material innovations, and lots of other fun updates.
+            </p>
+            <form class="d-flex justify-content-center align-items-center mt-4" style="max-width: 600px; margin: auto;">
+                <input type="email" class="form-control me-3" placeholder="Enter Your Email Address" style="padding: 15px; border: 1px solid #ddd; border-radius: 0; font-family: 'Quicksand', sans-serif;">
+                <button type="submit" class="btn btn-dark" style="padding: 15px 30px; font-family: 'Quicksand', sans-serif; font-size: 1rem; text-transform: uppercase;">Sign Up</button>
+            </form>
+            <p class="mt-3" style="font-size: 0.9rem; color: #777; font-family: 'Quicksand', sans-serif;">
+                Note: You can opt-out at any time. See our <a href="#" style="color: #333; text-decoration: underline;">Privacy Policy</a> and <a href="#" style="color: #333; text-decoration: underline;">Terms</a>.
+            </p>
+        </div>
+    </section>
+
+    <!-- Backpack Store Approach Section -->
+<section class="approach-section py-5" style="background-color: #f8f9fa;">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-5" style="font-family: 'Playfair Display', serif; font-size: 2.5rem;">The Backpack Store Approach</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <h4 class="fw-bold" style="font-family: 'Playfair Display', serif; font-size: 1.2rem;">Carry-All-Day Comfort</h4>
+                <p style="font-family: 'Quicksand', sans-serif; font-size: 1rem;">
+                    Lightweight, durable, and designed for everyday use, our backpacks make your daily commute or outdoor adventure effortless. Pack it up and go with unmatched comfort.
+                </p>
+                <a href="#" style="font-family: 'Quicksand', sans-serif; text-decoration: underline; font-size: 0.9rem;">Learn More</a>
+            </div>
+            <div class="col-md-4">
+                <h4 class="fw-bold" style="font-family: 'Playfair Display', serif; font-size: 1.2rem;">Sustainability in Every Stitch</h4>
+                <p style="font-family: 'Quicksand', sans-serif; font-size: 1rem;">
+                    From eco-friendly materials to ethical production, we’re committed to reducing waste while creating products that last. A better backpack for a better planet.
+                </p>
+                <a href="#" style="font-family: 'Quicksand', sans-serif; text-decoration: underline; font-size: 0.9rem;">Learn More</a>
+            </div>
+            <div class="col-md-4">
+                <h4 class="fw-bold" style="font-family: 'Playfair Display', serif; font-size: 1.2rem;">Materials Made to Move</h4>
+                <p style="font-family: 'Quicksand', sans-serif; font-size: 1rem;">
+                    Designed with innovative materials like recycled fibers and water-resistant fabrics, our backpacks are crafted to keep up with your lifestyle, rain or shine.
+                </p>
+                <a href="#" style="font-family: 'Quicksand', sans-serif; text-decoration: underline; font-size: 0.9rem;">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section py-5" style="background-color: #f9f9f9;">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-4" style="font-family: 'Playfair Display', serif; font-size: 2.5rem;">Backpack FAQs</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h5 style="font-family: 'Quicksand', sans-serif; font-weight: bold;">Where can I buy these backpacks?</h5>
+                <p style="font-family: 'Quicksand', sans-serif;">Our backpacks are available through our website and select retail partners. Check out our <a href="#" style="color: #333; text-decoration: underline;">store locator</a> for more details.</p>
+            </div>
+            <div class="col-md-6">
+                <h5 style="font-family: 'Quicksand', sans-serif; font-weight: bold;">How should I clean my backpack?</h5>
+                <p style="font-family: 'Quicksand', sans-serif;">To keep your backpack looking great, we recommend spot cleaning with a damp cloth and letting it air dry. Avoid submerging it in water or using harsh chemicals.</p>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <h5 style="font-family: 'Quicksand', sans-serif; font-weight: bold;">Are your backpacks water-resistant?</h5>
+                <p style="font-family: 'Quicksand', sans-serif;">Yes! Most of our backpacks are designed to be water-resistant, keeping your essentials safe in light rain. For full waterproofing, check specific product descriptions.</p>
+            </div>
+            <div class="col-md-6">
+                <h5 style="font-family: 'Quicksand', sans-serif; font-weight: bold;">What is the largest backpack available?</h5>
+                <p style="font-family: 'Quicksand', sans-serif;">Our largest backpacks are perfect for long adventures or heavy-duty needs, with up to 50 liters of capacity. Explore our <a href="#" style="color: #333; text-decoration: underline;">full collection</a>.</p>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <h5 style="font-family: 'Quicksand', sans-serif; font-weight: bold;">Can I use these backpacks for travel?</h5>
+                <p style="font-family: 'Quicksand', sans-serif;">Absolutely! Our travel-friendly designs feature ample space, ergonomic straps, and compartments for all your gear.</p>
+            </div>
+            <div class="col-md-6">
+                <h5 style="font-family: 'Quicksand', sans-serif; font-weight: bold;">Do your backpacks come with a warranty?</h5>
+                <p style="font-family: 'Quicksand', sans-serif;">Yes! We stand by our quality. All backpacks come with a one-year limited warranty for manufacturing defects.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>About Us</h5>
+                    <p>Your ultimate destination for premium, stylish, and functional backpacks for every adventure.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-white">Home</a></li>
+                        <li><a href="#shop" class="text-white">Shop</a></li>
+                        <li><a href="#blog" class="text-white">Blog</a></li>
+                        <li><a href="#contact" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Customer Service</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Shipping & Returns</a></li>
+                        <li><a href="#" class="text-white">FAQs</a></li>
+                        <li><a href="#" class="text-white">Warranty</a></li>
+                        <li><a href="#" class="text-white">Live Chat</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Follow Us</h5>
+                    <p>Explore new arrivals, exclusive deals, and our journey in creating the best backpacks. #backpackstore</p>
+                    <a href="#" class="text-white me-2"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-facebook fa-lg"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-twitter fa-lg"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-pinterest fa-lg"></i></a>
+                </div>
+            </div>
+            <hr class="my-4 border-light">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2024 Backpack Store. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <a href="#" class="text-white me-2">Terms</a>
+                    <a href="#" class="text-white me-2">Privacy</a>
+                    <a href="#" class="text-white">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
